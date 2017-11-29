@@ -12,11 +12,13 @@ import './assets/styles/main.styl'
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
-new Vue({
+const _ = new Vue({
+  components: {
+    App,
+  },
   el: '#app',
   router,
   template: '<App/>',
-  components: { App },
   // render: h => h(App, {
   //   props: { msg: 'World' }
   // })

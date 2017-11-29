@@ -6,10 +6,10 @@
     name: 'App',
     props: {
       msg: String,
-    }
+    },
   })
   export default class App extends Vue {
     // @Prop() msg: string
 
-    name = 'app'
+    private name = 'app'
   }

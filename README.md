@@ -7,7 +7,7 @@
 * Vuejs (2.5.2)
   * VueRouter (3.0.1)
 * Typescript (2.6.2)
-  * TSLint - todo
+  * TSLint (5.8.0)
 * Stylus (0.54.5)
   * Autoprefixer (7.1.6)
 
