@@ -6,6 +6,12 @@ const sourceMapEnabled = isProduction
   ? config.build.productionSourceMap
   : config.dev.cssSourceMap
 
+const AutoPrefixerBrowsers = [
+	'iOS >= 8.1',
+	'Android >= 4.2',
+	'IE >= 9',
+	'Safari >= 7'
+]
 
 module.exports = {
   loaders: utils.cssLoaders({
@@ -13,11 +19,21 @@ module.exports = {
     extract: isProduction
   }),
   cssSourceMap: sourceMapEnabled,
-  cacheBusting: config.dev.cacheBusting, 
+  cacheBusting: config.dev.cacheBusting,
   transformToRequire: {
     video: 'src',
     source: 'src',
     img: 'src',
     image: 'xlink:href'
-  }
+  },
+	stylus: {
+		use: [
+			require('poststylus')([
+				require('autoprefixer')({
+					browsers: AutoPrefixerBrowsers
+				}),
+				'rucksack-css'
+			])
+		]
+	}
 }
