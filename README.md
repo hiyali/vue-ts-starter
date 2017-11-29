@@ -16,11 +16,13 @@
 ``` bash
 yarn # install dependencies
 
-npm run dev # serve with hot reload at localhost:8080
+yarn run dev # serve with hot reload at localhost:8080
 
-npm run build # build for production with minification
+yarn run build # build for production with minification
 
-npm run unit # run unit tests
+yarn run lint # run lint checks
 
-npm test # run all tests
+yarn run unit # run unit tests
+
+yarn test # run all tests
 ```
