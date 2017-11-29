@@ -15,6 +15,7 @@ const AutoPrefixerBrowsers = [
 
 module.exports = {
   loaders: utils.cssLoaders({
+    ts: 'ts-loader',
     sourceMap: sourceMapEnabled,
     extract: isProduction
   }),
@@ -35,5 +36,6 @@ module.exports = {
 				'rucksack-css'
 			])
 		]
-	}
+	},
+  esModule: true
 }
